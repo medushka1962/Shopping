@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.mydomain.shopping.domain.Product
 import com.mydomain.shopping.domain.ProductRepository
+import kotlin.random.Random
 
 object ProductRepositoryImpl : ProductRepository {
 
@@ -15,8 +16,8 @@ object ProductRepositoryImpl : ProductRepository {
     private var autoIncrementId = 0
 
     init {
-        for (i in 0 until 10000){
-            val item = Product("Пиво $i","крепкое", i ,true)
+        for (i in 0 until 100){
+            val item = Product("Пиво $i","крепкое", i , Random.nextBoolean())
             addProduct(item)
         }
     }

@@ -7,13 +7,15 @@ import com.mydomain.shopping.domain.ProductRepository
 
 object ProductRepositoryImpl : ProductRepository {
 
-    private val shopList = mutableListOf<Product>()
+
+
+    private val shopList = sortedSetOf<Product>({ o1, o2 -> o1.id.compareTo(o2.id) })
     private val shopListLD = MutableLiveData <List<Product>>()
 
     private var autoIncrementId = 0
 
     init {
-        for (i in 0 until 10){
+        for (i in 0 until 10000){
             val item = Product("Пиво $i","крепкое", i ,true)
             addProduct(item)
         }

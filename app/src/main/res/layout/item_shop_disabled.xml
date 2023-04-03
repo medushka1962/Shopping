@@ -30,6 +30,15 @@
             tools:text="Салфетки" />
 
         <TextView
+            android:id="@+id/tv_disc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="Салфетки" />
+
+        <TextView
             android:id="@+id/tv_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -34,8 +34,10 @@ class MainActivity : AppCompatActivity() {
             }
             val view = LayoutInflater.from(this).inflate(layoutId, llShopList, false)
             val tvName = view.findViewById<TextView>(R.id.tv_name)
+            val tvDesc = view.findViewById<TextView>(R.id.tv_disc)
             val tvCount = view.findViewById<TextView>(R.id.tv_count)
             tvName.text = shopItem.name
+            tvDesc.text = shopItem.disc
             tvCount.text = shopItem.count.toString()
             view.setOnLongClickListener {
                 viewModel.changeEnableState(shopItem)

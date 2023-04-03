@@ -3,7 +3,7 @@ package com.mydomain.shopping.domain
 data class Product(
 
    val name: String,
-   val desc: String,
+   val disc: String,
    val count: Int,
    val enabled: Boolean,
    var id: Int = UNDEFINED_ID,

@@ -16,7 +16,7 @@ object ProductRepositoryImpl : ProductRepository {
     private var autoIncrementId = 0
 
     init {
-        for (i in 0 until 100){
+        for (i in 0 until 1000){
             val item = Product("Пиво $i","крепкое", i , Random.nextBoolean())
             addProduct(item)
         }
